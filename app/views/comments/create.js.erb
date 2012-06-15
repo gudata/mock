@@ -1,0 +1,2 @@
+$('#comments').append("<%= escape_javascript(render @comment) %>");  
+$('#post_comment_form').html("<%=  escape_javascript(render(:partial => '/categories/comment_form')) %>");

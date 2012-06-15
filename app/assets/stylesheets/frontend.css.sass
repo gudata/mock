@@ -1,0 +1,58 @@
+$green: #348F34
+$blue: #8BACCE
+$orange: #DA7E02
+@include sticky-footer(54px)
+@import "compass/typography/lists/inline-block-list"
+@import "compass/css3/box-shadow"
+$default-box-shadow-color: $green
+
+@include sticky-footer(54px, ".container", "#footer", "#footer")
+
+h1
+  color: $orange
+  font-size: 16px
+  font-weight: bold
+  margin: 10px 0 20px 0
+div.content
+  width: 600px
+  margin: 100px auto 0 auto
+  padding: 10px
+  border: solid 1px silver
+  p
+    margin: 0 0 0 10px
+    
+  ul.nav
+    +inline-block-list-container
+    margin: 10px
+    li
+      +inline-block-list-item
+      border: solid 1px $green
+      padding: 10px 10px 10px 20px
+      border-left: none
+      a
+        color: green
+        text-decoration: none
+    li:first-child
+      +inline-block-list-item
+      border-left: solid 1px $green
+      margin: 0
+    li:hover
+      @include box-shadow(rgba($green, 0.9) 0 0 67px, rgba($green, 0.2) 0 0 3px 1px inset)
+    li.active
+      a
+        text-decoration: underline
+  #add_post_button
+    color: $green
+    text-decoration: underline
+  #add_post_button:hover
+    cursor: pointer
+  #comments
+    .comment
+      @include border-radius(25px)
+      border: solid 1px $blue
+      padding: 40px
+      margin: 10px 0 0 0
+      overflow: auto
+      .image
+        float: left
+        margin: 0 10px 0 0

@@ -1,0 +1,4 @@
+.comment id=comment.id
+  .image
+    = image_tag Gravatar.new(comment.email).image_url(:default => :monsterid )
+  = comment.text

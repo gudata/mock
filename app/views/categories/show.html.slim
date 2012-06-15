@@ -1,0 +1,14 @@
+h1=@category.title.humanize
+p=@category.text
+
+ul.nav
+  - @categories.each do |category|
+    li class=(category.id.to_s == params[:id] ? 'active inline-block-list-item ': 'inline-block-list-item')
+      = link_to category.title.humanize, category
+#add_post_button 
+  ' Add Post
+#post_comment_form style='display: none;'
+  == render :partial => 'comment_form', :locals => {:category => @category}
+
+#comments
+  == render @category.comments
