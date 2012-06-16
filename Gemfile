@@ -5,7 +5,7 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', :group => :development
 gem "slim"
 gem "slim-rails"
 gem 'awesome_print'
@@ -15,6 +15,7 @@ gem 'gravatar-ultimate'
 gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git'
 gem 'json'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
