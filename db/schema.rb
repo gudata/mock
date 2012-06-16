@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120615133154) do
 
   create_table "categories", :force => true do |t|
-    t.string   "text"
+    t.text     "text"
     t.string   "title"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
