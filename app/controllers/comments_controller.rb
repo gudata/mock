@@ -12,8 +12,6 @@ class CommentsController < ApplicationController
         format.js
       else
         # TODO handle errors in the right way - show nice msg in js and html mode.
-        format.html { redirect_to, notice: 'Comment was successfully posted.' }
-        format.js { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
   end
